@@ -74,20 +74,31 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
+        /* --- ATTRACTIVE BUTTON STYLES (Restored) --- */
         .btn-primary {
+            /* Base Style */
             background-color: var(--color-primary-red);
             color: var(--color-background-cream);
-            border: 2px solid var(--color-primary-red);
+            border: 3px solid var(--color-primary-red);
+            
+            /* Enhance look with subtle gradient and deeper shadow */
+            background-image: linear-gradient(to bottom, var(--color-primary-red), #660000);
+            box-shadow: 0 6px 10px rgba(139, 0, 0, 0.4);
         }
 
         .btn-primary:hover {
+            /* Hover Effect */
             background-color: var(--color-secondary-gold);
             color: var(--color-primary-red);
             border-color: var(--color-secondary-gold);
-            transform: translateY(-2px);
+            transform: translateY(-3px); /* Slightly more lift */
+            box-shadow: 0 8px 15px rgba(255, 215, 0, 0.6); /* Gold glow on hover */
+            background-image: none;
         }
+        /* --- END ATTRACTIVE BUTTON STYLES --- */
 
-        /* Animations: Floating Hearts & Petals (Canvas-based or simple CSS) */
+
+        /* Animations: Floating Hearts & Petals */
         .animated-background {
             position: fixed;
             top: 0;
@@ -127,15 +138,14 @@
             }
         }
 
-        /* Background Pattern Decoration (Subtle Indian Floral) */
+        /* Background Pattern Decoration */
         .section {
             padding: 80px 0;
             position: relative;
-            z-index: 2; /* Ensure content is above animations */
+            z-index: 2; 
             overflow: hidden;
         }
 
-        /* Floral Border Effect (Optional requirement) */
         .section::before {
             content: '';
             position: absolute;
@@ -149,7 +159,7 @@
             z-index: -1;
         }
 
-        /* Smooth Scroll Animation (via JS, but prepare CSS for elements) */
+        /* Smooth Scroll Animation */
         .scroll-reveal {
             opacity: 0;
             transform: translateY(50px);
@@ -204,7 +214,7 @@
             color: var(--color-text-dark);
         }
 
-        /* --- 2. Our Story --- */
+        /* --- 2. Our Story (RESTORED) --- */
         #our-story {
             text-align: center;
             background-color: #FDF5E6; /* Slightly different cream */
@@ -221,7 +231,7 @@
             background-color: rgba(255, 255, 255, 0.7);
         }
 
-        /* --- 3. Wedding Events --- */
+        /* --- 3. Wedding Events (RESTORED) --- */
         #events {
             background-color: var(--color-background-cream);
         }
@@ -277,7 +287,7 @@
             border: 1px solid #eee;
         }
 
-        /* --- 4. Photo Gallery --- */
+        /* --- 4. Photo Gallery (RESTORED) --- */
         #gallery {
             background-color: #FDF5E6;
         }
@@ -301,7 +311,7 @@
             transform: scale(1.05);
         }
 
-        /* --- 5. Countdown Timer --- */
+        /* --- 5. Countdown Timer (RESTORED) --- */
         #countdown {
             text-align: center;
             padding: 50px 0;
@@ -353,14 +363,9 @@
             font-size: 1.2em;
         }
 
+        /* Ensure Get Directions link uses button styling */
         .venue-info a {
-            color: var(--color-primary-red);
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .venue-info a:hover {
-            text-decoration: underline;
+            font-weight: normal; 
         }
 
         #google-map {
@@ -369,22 +374,6 @@
             border: 5px solid var(--color-secondary-gold);
             border-radius: 10px;
             overflow: hidden;
-        }
-
-        /* --- 8. RSVP Section --- */
-        #rsvp {
-            text-align: center;
-            background-color: #FDF5E6;
-        }
-
-        #rsvp-form {
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
-            height: 700px; /* Adjusted height for embedded form */
-            border: none;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
         }
 
         /* --- 9. Share Buttons --- */
@@ -425,7 +414,7 @@
             font-size: 0.9em;
         }
 
-        /* Media Queries for Responsiveness */
+        /* Media Queries for Responsiveness (RESTORED) */
         @media (max-width: 768px) {
             .section-title {
                 font-size: 2.5em;
@@ -439,30 +428,26 @@
                 font-size: 1.2em;
             }
 
-            .event-grid {
+            .event-grid { 
                 flex-direction: column;
                 align-items: center;
             }
 
-            #timer {
+            #timer { 
                 flex-wrap: wrap;
             }
 
-            .time-unit {
+            .time-unit { 
                 min-width: 80px;
                 padding: 15px;
             }
 
-            .time-unit span {
+            .time-unit span { 
                 font-size: 2em;
             }
 
-            .gallery-grid {
+            .gallery-grid { 
                 grid-template-columns: 1fr;
-            }
-
-            #rsvp-form {
-                height: 500px;
             }
         }
     </style>
@@ -482,7 +467,7 @@
             <p>The Wedding of</p>
             <h1>Sridhar <span>❤️</span> Supraja</h1>
             <p>October 16th & 17th, 2025</p>
-            <p>We're getting married!</p>
+            <p>Our wedding would be quite incomplete without your participation. We hope to see you at venue!</p>
         </div>
     </section>
 
@@ -555,10 +540,9 @@
         <div class="container">
             <h2 class="section-title scroll-reveal">Gallery</h2>
             <div class="gallery-grid">
-                <div class="gallery-item scroll-reveal"><img src="https://picsum.photos/400/300?couple1" alt="Couple Photo 1" loading="lazy"></div>
-                <div class="gallery-item scroll-reveal"><img src="https://picsum.photos/400/300?couple2" alt="Couple Photo 2" loading="lazy"></div>
-                <div class="gallery-item scroll-reveal"><img src="https://picsum.photos/400/300?couple3" alt="Couple Photo 3" loading="lazy"></div>
-                <div class="gallery-item scroll-reveal"><img src="https://picsum.photos/400/300?couple4" alt="Couple Photo 4" loading="lazy"></div>
+                <div class="gallery-item scroll-reveal"><img src="image1.jpeg" alt="Couple Photo 1" loading="lazy"></div>
+                <div class="gallery-item scroll-reveal"><img src="image2.jpeg" alt="Couple Photo 2" loading="lazy"></div>
+                <div class="gallery-item scroll-reveal"><img src="image3.jpeg" alt="Couple Photo 3" loading="lazy"></div>
             </div>
         </div>
     </section>
@@ -571,7 +555,7 @@
                 <br>
                 <strong>TTD Kalyana Mandapam, Devuni Kadapa, Kadapa</strong>
                 <br>
-                <a href="https://maps.app.goo.gl/zd1t7k7ACJvn4MsW6" target="_blank">Get Directions</a>
+                <a href="https://maps.app.goo.gl/zd1t7k7ACJvn4MsW6" target="_blank" class="btn btn-primary">📍 Get Directions</a>
             </p>
             <div id="google-map" class="scroll-reveal">
                 <iframe
@@ -588,7 +572,7 @@
     </section>
     <footer>
         <div class="container">
-            <p>&copy; 2025 Sridhar & Supraja. Invitation with Love and Blessings.</p>
+            <p>© 2025 Sridhar & Supraja. Invitation with Love and Blessings.</p>
         </div>
     </footer>
 
@@ -603,6 +587,13 @@
             const animationLayer = document.getElementById('animation-layer');
             const musicToggle = document.getElementById('music-toggle');
             const music = document.getElementById('wedding-music');
+            
+            // Auto-Scroll Variables
+            let scrollInterval = null;
+            let autoScrollAttempted = false;
+            const scrollSpeed = 30; // Pixels to scroll per interval
+            const scrollDelay = 300; // Milliseconds between scroll steps
+            const initialDelay = 10000; // 10000ms = 10 seconds delay 
 
             // --- Countdown Timer Logic ---
             function updateCountdown() {
@@ -628,12 +619,69 @@
             const countdownInterval = setInterval(updateCountdown, 1000);
             updateCountdown(); // Initial call
 
+            // --- Auto Scroll Logic ---
+            function startAutoScroll() {
+                // Only start if not already running
+                if (!scrollInterval) {
+                    scrollInterval = setInterval(function() {
+                        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+                        
+                        if (window.scrollY >= maxScroll - 50) { 
+                            // Stop scrolling when at the bottom
+                            stopAutoScroll(); 
+                            // Scroll back to top after a short delay (8 seconds)
+                            setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 8000);
+                            // Restart auto-scroll after reset (10 seconds total delay)
+                            setTimeout(startAutoScroll, 10000); 
+                        } else {
+                            // Scroll down slowly
+                            window.scrollBy({ top: scrollSpeed, left: 0, behavior: 'smooth' });
+                        }
+                    }, scrollDelay);
+                }
+            }
+
+            function stopAutoScroll() {
+                if (scrollInterval) {
+                    clearInterval(scrollInterval);
+                    scrollInterval = null;
+                }
+            }
+
+            // Function to handle the start attempt after the delay
+            function handleInitialStart() {
+                autoScrollAttempted = true;
+                // Check if user has scrolled manually (e.g., more than 50px away from the top)
+                if (window.scrollY < 50) {
+                    startAutoScroll();
+                } 
+            }
+            
+            // 1. Start attempt after the defined initialDelay (10 seconds)
+            const initialTimer = setTimeout(handleInitialStart, initialDelay);
+
+            // 2. Stop auto-scroll permanently on any user interaction
+            const stopEvents = ['wheel', 'touchstart', 'keydown', 'mousedown'];
+            stopEvents.forEach(event => {
+                // Stop the auto-scroll interval if it is running
+                window.addEventListener(event, stopAutoScroll, { once: true }); 
+                
+                // If user interacts before the initial timer runs, clear the timer
+                window.addEventListener(event, () => {
+                    if (!autoScrollAttempted) {
+                        clearTimeout(initialTimer);
+                        autoScrollAttempted = true; // Mark as handled to prevent start
+                    }
+                }, { once: true });
+            });
+
+
             // --- Floating Hearts & Petals Animation ---
             function createFloatingElement(type) {
                 const element = document.createElement('div');
                 element.classList.add(type);
                 if (type === 'heart') {
-                    element.innerHTML = '&#9829;'; // HTML heart entity
+                    element.innerHTML = '♥'; // HTML heart entity
                 }
                 
                 const size = Math.random() * 10 + 10; // 10px to 20px
@@ -691,18 +739,17 @@
 
             // --- Save-the-Date Function (Basic ICS/Google Calendar Link) ---
             window.saveToCalendar = function() {
-                const title = "Sridhar & Supraja Wedding (Reception)";
+                const title = "Sridhar & Supraja Wedding!";
                 const description = "Reception and Orchestra for Sridhar & Supraja's wedding. Followed by Muhurtham on Oct 17th.";
                 const location = "TTD Kalyana Mandapam, Devuni Kadapa, Kadapa";
 
                 // Dates for Oct 16th, 7:30 PM
                 const dateStart = new Date(2025, 9, 16, 19, 30, 0); // Month is 0-indexed (9 for October)
-                const dateEnd = new Date(2025, 9, 16, 23, 0, 0); // End time placeholder
+                const dateEnd = new Date(2025, 9, 17, 11, 0, 0); // End time placeholder
 
                 const formatTime = (date) => {
-                    // YYYYMMDDTHHMMSSZ (UTC format)
+                    // YYYYMMDDTHHMMSS (Local time used here)
                     const pad = (n) => String(n).padStart(2, '0');
-                    // This is simple, for accurate ICS use a library or convert to UTC properly
                     return `${date.getFullYear()}${pad(date.getMonth() + 1)}${pad(date.getDate())}T${pad(date.getHours())}${pad(date.getMinutes())}00`;
                 };
 
@@ -720,7 +767,7 @@
                 const message = encodeURIComponent(`You're invited to the wedding of Sridhar ❤️ Supraja!
 Dates: October 16th & 17th, 2025
 Venue: TTD Kalyana Mandapam, Kadapa.
-Find all the details here: ${window.location.href}`); // Replace with the actual published URL
+Find all the details here: ${window.location.href}`); 
 
                 const whatsappURL = `https://wa.me/?text=${message}`;
                 document.getElementById('whatsapp-share').href = whatsappURL;
